@@ -1,148 +1,66 @@
-This assignment analyzes a telecom dataset using Spark for big data processing, performs exploratory data analysis and correlation analysis,
-compares Spark operation performance, and builds an optimized Random Forest model to predict customer churn.
+Telecom Customer Churn Analysis using Spark & Machine Learning
 
-1. Dataset Loading & Environment Setup
+This project focuses on analyzing a telecom customer dataset using Big Data technologies and Machine Learning to understand customer behavior and predict churn. It combines Exploratory Data Analysis (EDA), Apache Spark processing, and a Random Forest classification model to deliver meaningful insights.
 
-You started by importing the required libraries such as Pandas and PySpark, and then:
+Telecom Customer Churn Analysis using Spark & Machine Learning
 
-Initialized a Spark Session to work with big data.
+This project focuses on analyzing a telecom customer dataset using Big Data technologies and Machine Learning to understand customer behavior and predict churn. It combines Exploratory Data Analysis (EDA), Apache Spark processing, and a Random Forest classification model to deliver meaningful insights.
 
-Loaded the telecom customer dataset into Pandas and Spark DataFrames.
+* Technologies Used
 
-Displayed sample rows to understand the structure of the data.
- Purpose:
-To prepare the environment for big data analysis using both Pandas (small-scale inspection) and Spark (large-scale processing).
+Python,Apache Spark (PySpark), Pandas, Apache Hive (SQL-style queries), Scikit-learn, Jupyter Notebook.
 
-2. Exploratory Data Analysis (EDA)
+* Exploratory Data Analysis (EDA)
 
-You explored the dataset to understand customer behavior and data quality by:
+Inspected dataset structure, data types, and missing values.
 
-Checking:
+Analyzed customer demographics and service subscriptions.
 
-Dataset shape
+Visualized churn distribution and payment methods.
 
-Column data types
+Studied relationships between numerical features using correlation analysis.
 
-Missing values
 
-Using:
+* Big Data Processing with Spark
 
-df.info()
+Initialized a Spark Session for large-scale data handling.
 
-df.describe()
+Performed aggregation and filtering operations on customer usage data.
 
-Frequency counts for categorical variables
+Identified high-usage and frequent-call customers.
 
-Viewing distributions of:
+Executed Hive-style SQL queries on Spark DataFrames.
 
-Payment methods
+Compared execution time and CPU utilization of different Spark operations.
 
-Churn status
+* Data Cleaning & Preprocessing
 
-Service subscriptions
+Handled missing and inconsistent values.
 
- Purpose:
-To identify patterns, inconsistencies, and important features that influence customer churn.
+Standardized categorical variables.
 
-3. Correlation Analysis
+Applied feature engineering techniques.
 
-You included a correlation section where you:
+Converted categorical features into numerical format using dummy variables.
 
-Analyzed relationships between numerical features.
+* Machine Learning Model
 
-Observed how variables relate to customer churn.
+Implemented a Random Forest Classifier for churn prediction.
 
-Used graphs to visualize relationships (e.g., payment method vs churn).
+Used GridSearchCV for hyperparameter tuning.
 
- Purpose:
-To understand which features are strongly related to churn and should be used in modeling.
+Applied cross-validation to improve model reliability.
 
-4. Spark-Based Big Data Operations
+Evaluated model performance using accuracy and validation metrics.
 
-You performed multiple Spark operations, including:
+* Key Outcomes
 
-🔹 Aggregation
+Identified important factors contributing to customer churn.
 
-Calculated averages and summaries for numerical columns.
+Demonstrated efficient big data processing using Apache Spark.
 
-🔹 Customer Usage Analysis
+Built an optimized machine learning model for churn prediction.
 
-Identified:
+Showcased integration of Spark, SQL, and machine learning workflows.
 
-High data-usage customers
 
-Frequently calling customers
-
-🔹 Performance Measurement
-
-Compared execution time and CPU usage of Spark operations.
-
- Purpose:
-To demonstrate how Spark efficiently processes large telecom datasets and to compare performance across operations (important for your Assignment 2).
-
-5. Hive / SQL-style Queries
-
-You used Hive-like SQL queries on Spark DataFrames to:
-
-Perform structured queries.
-
-Simulate data warehousing operations.
-
-Extract business insights using SQL logic.
-
-Purpose:
-To show integration of big data analytics with SQL-based querying, commonly used in telecom industries.
-
-6. Data Cleaning & Preprocessing
-
-In the DATA CLEANING section, you:
-
-Checked inconsistent values (e.g., SeniorCitizen, TechSupport).
-
-Handled missing or incorrect entries.
-
-Ensured consistency between train and test datasets.
-
-Prepared categorical variables for machine learning.
-
- Purpose:
-To improve data quality, which directly impacts model accuracy.
-
-7. Feature Engineering
-
-Converted categorical features into dummy variables.
-
-Selected relevant features for churn prediction.
-
-👉 Purpose:
-Machine learning models require numerical input, so this step prepares data for modeling.
-
-8. Machine Learning – Random Forest
-
-In the Random Forest section,
-
-Trained a Random Forest classifier for churn prediction.
-
-Used GridSearchCV to:
-
-Tune hyperparameters
-
-Improve model performance
-
-Applied cross-validation for reliability.
-
-👉 Purpose:
-To build an accurate churn prediction model using an ensemble learning technique.
-
-9. Model Evaluation
-
-You evaluated the model using:
-
-Accuracy and performance metrics.
-
-Cross-validation results.
-
-Comparison of parameter settings.
-
-👉 Purpose:
-To verify how well the model predicts customer churn and avoid overfitting.
